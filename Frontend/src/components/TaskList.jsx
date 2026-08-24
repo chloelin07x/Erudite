@@ -12,6 +12,24 @@ function formatTime(timeStr) {
 }
 
 function TaskRow({ task, onToggle }) {
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    const ISOtomorrow = `${tomorrow.getFullYear()}-${String(tomorrow.getMonth()+1).padStart(2,"0")}-${String(tomorrow.getDate()).padStart(2,"0")}`;
+    const ISOtoday = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
+
+    let status = null;
+    if (!task.completed) {
+        if (task.due_date < ISOtoday) {
+            status = { text: "Overdue!", classes: "text-xs text-red-600 font-bold" };
+        } else if (task.due_date === ISOtoday) {
+            status = { text: "Due Today!", classes: "text-xs text-red-600 font-semibold" };
+        } else if (task.due_date === ISOtomorrow) {
+            status = { text: "Due Tomorrow", classes: "text-xs text-amber-600 font-medium" };
+        }
+    }
+
     return (
         <div className="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#f2f9fa] transition-colors">
             <label className="relative flex items-center justify-center w-5 h-5 shrink-0 cursor-pointer">
@@ -23,7 +41,7 @@ function TaskRow({ task, onToggle }) {
                 />
                 <span className="w-5 h-5 rounded-full border-2 border-[#bcc1ba] peer-checked:bg-[#215561] peer-checked:border-[#215561] transition-colors" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"
-                    className="absolute w-3 h-3 hidden peer-checked:block pointer-events-none">
+                    className="absolute w-3  h-3 hidden peer-checked:block pointer-events-none">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                 </svg>
             </label>
@@ -31,6 +49,12 @@ function TaskRow({ task, onToggle }) {
             <span className={`flex-1 text-sm font-medium truncate ${task.completed ? "line-through text-gray-400" : "text-[#13373F]"}`}>
                 {task.task_name}
             </span>
+
+            {status && (
+                <span className={`${status.classes}`}>
+                    {status.text}
+                </span>
+            )}
 
             <span className="flex items-center gap-1 text-xs text-[#4B6470] shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-3.5">
