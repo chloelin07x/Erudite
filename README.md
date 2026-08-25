@@ -33,8 +33,8 @@ Erudite was made by first creating [Pydantic] schemas, an [SQLAlchemy] models fo
 
 ## Gallery
 Login and Signup Page:
-[Image of login page](https://github.com/chloelin07x/Erudite/blob/main/Images/LoginPage.png)
-[Image of signup page](https://github.com/chloelin07x/Erudite/blob/main/Images/SignupPage.png)
+![Image of login page](https://github.com/chloelin07x/Erudite/blob/main/Images/LoginPage.png?raw=true)
+![Image of signup page](https://github.com/chloelin07x/Erudite/blob/main/Images/SignupPage.png?raw=true)
 
 Brief overview of navigating and using the website, with data already in the database:
-[A video that shows how to navigate the app and a couple of its' features](https://github.com/chloelin07x/Erudite/blob/main/Images/Overview.mp4)
+![A video that shows how to navigate the app and a couple of its' features](https://github.com/chloelin07x/Erudite/blob/main/Images/Overview.gif?raw=true)
