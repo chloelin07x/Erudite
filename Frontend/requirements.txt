@@ -1,0 +1,11 @@
+@emotion/react
+@emotion/styled
+@mui/material
+@mui/x-charts
+@mui/x-date-pickers
+axios
+dayjs
+react, react-dom (v19)
+react-router-dom (v7)
+tailwind css (v3)
+postcss and autoprefixer
