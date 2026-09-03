@@ -16,7 +16,9 @@ from routes.scheduler import router as scheduler_router
 Base.metadata.create_all(bind=engine) # Creates database tables
 app = FastAPI()
 
-origins = ["http://localhost:5173"]
+origins = [
+  "http://localhost:5173",
+  "https://erudite-yo49.onrender.com"]
 
 app.add_middleware(CORSMiddleware,
                    allow_origins=origins,
