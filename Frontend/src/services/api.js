@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({baseURL : "http://127.0.0.1:8000"});
+const api = axios.create({baseURL: import.meta.env.VITE_API_URL});
 
 // This interceptor will silently get the token from local storage
 // And attach it to every call as a header
