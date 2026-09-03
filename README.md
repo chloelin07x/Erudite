@@ -14,7 +14,7 @@ Each login generates a 24h JWT token
 A JWT token is required to access protected routes such as Dashboard, Modules, etc... unlike Login and Signup
 
 ## Installation 
-1. Ensure that you have all the requirements from Backend/requirements.txt and Frontend/requirements.txt installed
+1. ```pip install -r requirements.txt``` to install all the backend dependencies
 2. Fill out the .env.example file as shown and rename it to .env
 3. Fork the repo
 4. Open terminal and run
@@ -28,6 +28,9 @@ A JWT token is required to access protected routes such as Dashboard, Modules, e
    python -m uvicorn main:app --reload
    ```
 6. It will be locally hosted on http://localhost:5173/
+
+### Optional
+PgAdmin4 can be used to inspect the PostgreSQL database.
 
 ## Implementation
 Erudite was made by first creating [Pydantic] schemas, an [SQLAlchemy] models for a normalised database, and a RESTful API (via [FastAPI]) that queries the database. The frontend was created using [React], [HeroIcons] (https://heroicons.com/outline), [Mui] (https://mui.com), and [Tailwind CSS]. I use [CORSMiddleware] and [Axios] to allow the frontend to access the endpoints. It mainly uses React's useState and useEffect methods to initially load data from the database and also create the responsive interface.
