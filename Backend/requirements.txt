@@ -1,10 +1,3 @@
-# Backend
-# Must have installed:
-Python 3.12
-PostgreSQL
-pip
-
-# Installed via `pip install`
 fastapi
 uvicorn
 sqlalchemy
@@ -14,24 +7,4 @@ python-dotenv
 python-jose
 passlib
 bcrypt
-
-Note: fill out the .env.example file as shown and rename it to .env
-Optional but convenient: PgAdmin4 to inspect your database
-
-# Frontend
-# Must have installed:
-Node.js
-npm (comes with Node.js)
-
-# Install using `npm install`
-@emotion/react
-@emotion/styled
-@mui/material
-@mui/x-charts
-@mui/x-date-pickers
-axios
-dayjs
-react, react-dom (v19)
-react-router-dom (v7)
-tailwind css (v3)
-postcss and autoprefixer
+email-validator
