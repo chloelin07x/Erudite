@@ -18,7 +18,8 @@ app = FastAPI()
 
 origins = [
   "http://localhost:5173",
-  "https://erudite-yo49.onrender.com"]
+  "https://erudite-yo49.onrender.com",
+  "https://erudite-gamma.vercel.app"]
 
 app.add_middleware(CORSMiddleware,
                    allow_origins=origins,
