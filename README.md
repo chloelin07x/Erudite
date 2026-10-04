@@ -1,5 +1,10 @@
 # Erudite
-Erudite allows you to start organising your revision, will help you plan out your revision, and support you in meeting those commitments. Suitable for GCSE students to University level students.
+Erudite allows you to start organising your time, will help you plan out your revision, and support you in meeting those commitments. Suitable for GCSE students to University level students.
+
+## Why is it better?
+It uses clear layouts, simple colour palette, and research-proven studying methods that'll support you in attaining the highest grades. 
+A common piece of advice given to students when revising for exams is to "explicitly define what you will do in that allocated study hour". With the addition of "sub-tasks" and the scheduling algorithm, Erudite will automatically input study slots into your calendar that describe exactly what you should do in that slot.  
+Furthermore, you're completely in control! Drag-and-drop to reorganise your calendar, assign priorities to different tasks so the algorithm can prioritise them first, and include due dates and times so that the program not only warns you when they're upcoming, but you can also focus on those first.
 
 ## Key Features
 - A Dashboard page that gives you statistics, lists out your tasks, and highlights upcoming tasks
