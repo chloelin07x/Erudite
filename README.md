@@ -17,8 +17,8 @@ Furthermore, you're completely in control! Drag-and-drop to reorganise your cale
 
 ### Authentication
 All user passwords are hashed using HS256 algorithm and a secret key before stored in the database.
-Each login generates a 24h JWT token
-A JWT token is required to access protected routes such as Dashboard, Modules, etc... unlike Login and Signup
+Each login generates a 24h JWT token.
+A JWT token is required to access protected routes such as Dashboard, Modules, etc... unlike Login and Signup.
 
 ## Installation 
 1. ```pip install -r requirements.txt``` to install all the backend dependencies
